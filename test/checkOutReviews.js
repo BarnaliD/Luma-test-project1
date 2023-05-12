@@ -29,11 +29,11 @@ describe('Reading reviews', () => {
                 await driver.wait(until.elementLocated(By.id('tab-label-reviews-title')), 10000);
                 await driver.findElement(By.id('tab-label-reviews-title')).click();
                 await driver.wait(until.elementLocated(By.id('review-form')), 10000);
-                const reviewForm = driver.findElement(By.id('review-form')).getCssValue();
-                console.log(reviewForm);
-                //reviewForm.should.contain('review-form');
+                driver.wait(until.elementLocated(By.id('review-form')), 10000)
+                const reviewForm = await driver.findElement(By.id('review-form')).getText();
+                reviewForm.should.contain('You\'re reviewing:');
             } finally {
-                //await driver.quit();
+                await driver.quit();
             }
         });
     });

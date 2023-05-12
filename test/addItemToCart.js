@@ -33,7 +33,7 @@ describe('Add an item to the cart', () => {
                 price.should.contain('$35.00');
                 
             } finally {
-                //await driver.quit();
+                await driver.quit();
             }
             
         });
