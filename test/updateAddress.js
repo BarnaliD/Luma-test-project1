@@ -1,4 +1,4 @@
-//includes
+//Barnali Userstories
 const { Builder, By , Key , until } = require('selenium-webdriver');
 const should = require('chai').should();
 require('dotenv').config();
@@ -31,7 +31,7 @@ describe('Update PhoneNumber & StreetAdress',() =>{
             await driver.findElement(By.css('#send2')).click(); 
 
             //Implicit wait to allow site to load
-            await driver.sleep(1000);
+            await driver.sleep(10000);
 
             //Get to our profile
             await driver.wait(until.elementLocated(By.css('.action.switch')),20000);
