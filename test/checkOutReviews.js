@@ -9,18 +9,18 @@ const should = require('chai').should();
     so I can see what other people think about the product before I purchase it.
 */
 
-describe('Reading reviews', () => {
+describe.only('Reading reviews', () => {
     context('I click on reviews', () => {
         it('I can see the reviews of a product', async () => {
             const driver = await new Builder().forBrowser('firefox').build();
-            const actions = driver.actions({bridge: true});
+            const actions = driver.actions();
 
             try {
                 await driver.get('https://magento.softwaretestingboard.com/');
                 await driver.wait(until.elementLocated(By.css('.ui-menu-icon.ui-icon.ui-icon-carat-1-e')), 10000);
                 const subMenus = await driver.findElements(By.css('.ui-menu-icon.ui-icon.ui-icon-carat-1-e'));
                 const gearSubMenu = await subMenus[6];
-                await actions.move({duration: 1000, origin: gearSubMenu, x: 1, y: 1}).perform();
+                await actions.move({duration: 1000, origin: gearSubMenu}).perform();
                 await driver.wait(until.elementLocated(By.id('ui-id-27')), 10000);
                 await driver.findElement(By.id('ui-id-27')).click();
                 await driver.wait(until.elementLocated(By.css('.product-item-info')), 10000);
