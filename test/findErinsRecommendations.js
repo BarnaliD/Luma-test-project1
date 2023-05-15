@@ -19,23 +19,19 @@ describe('Go to womens t-shirts and find the ones Erin recomends', () => {
                  // Go to womans items  
                  await driver.wait(until.elementLocated(By.id('ui-id-4')), 10000);  
                  await driver.findElement(By.id('ui-id-4')).click();
-                 console.log('wrks1');
 
                  // Go to t-shirts
                  await driver.wait(until.elementLocated(By.css('.more.icon')), 10000);
                  await driver.findElement(By.css('.more.icon')).click();
-                 console.log('wrks2');
 
                  // Expand Erins recomendations-filter
                  await driver.wait(until.elementLocated(By.css('.block-content.filter-content')), 10000);
                  //await driver.sleep(10000);
                  await driver.findElement(By.xpath("(//div[@class='filter-options-title'])[8]")).click();
-                 console.log('wrks3');
 
                  // Choose yes
                  await driver.wait(until.elementLocated(By.css('a[href$="/women/tops-women/tees-women.html?erin_recommends=1"]')), 10000);
                  await driver.findElement(By.css('a[href$="/women/tops-women/tees-women.html?erin_recommends=1"]')).click();
-                 console.log('wrks4');
 
                  // Assert
                  await driver.wait(until.elementLocated(By.css('.product-item:first-child')), 10000);
