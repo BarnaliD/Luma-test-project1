@@ -20,9 +20,6 @@ describe('Contact the company using the contact form', () => {
 
                 // Locate and click the Contact Us link to get the form
 
-                // Why doesn't this querySelector work when it does work on the browser?
-                //await driver.wait(until.elementLocated(By.css('.nav.item:last-child')), 10000);
-                //await driver.findElement(By.css('.nav.item:last-child')).click();
                 await driver.wait(until.elementLocated(By.css('a[href$="/contact/"]')), 10000);
                 await driver.findElement(By.css('a[href$="/contact/"]')).click();
 
