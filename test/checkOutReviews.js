@@ -9,7 +9,7 @@ const should = require('chai').should();
     so I can see what other people think about the product before I purchase it.
 */
 
-describe.only('Reading reviews', () => {
+describe('Reading reviews', () => {
     context('I click on reviews', () => {
         it('I can see the reviews of a product', async () => {
             const driver = await new Builder().forBrowser('firefox').build();
