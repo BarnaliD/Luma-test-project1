@@ -4,42 +4,52 @@ const should = require('chai').should();
     /*
    As a customer I want to compare two items to eachother
    */
-describe('Compare two different running shorts to eachother', () => {
+describe.only('Compare two different running shorts to eachother', () => {
     context('Search for shorts, filter on runners and add two styles to compare', () => {
         it('I should get a camparison of the two styles of shorts', async () => {
                 
                 const driver = await new Builder().forBrowser('firefox').build();  
 
-            try {
-                 // store
-                 await driver.get('https://magento.softwaretestingboard.com/')
+                try{
+                  
+                    await driver.get('https://magento.softwaretestingboard.com/')
+                    
+                    // Search for running shorts
+                    await driver.wait(until.elementLocated(By.css('#search')), 10000);
+                    await driver.findElement(By.id('search')).sendKeys('running shorts', Key.RETURN);
 
-                 // search
-                 await driver.findElement(By.id('search')).sendKeys(' running shorts', Key.ENTER);
+                    // Select first product and add to "compare"
+                    await driver.wait(until.elementLocated(By.css('a[href$="/erika-running-short.html"]')), 10000);
+                    await driver.findElement(By.css('a[href$="/erika-running-short.html"]')).click();
+                    await driver.sleep(1000);
+                    await driver.wait(until.elementLocated(By.css('.action.tocompare')), 10000);
+                    await driver.findElement(By.css('.action.tocompare')).click();
+                    
+                    // Return to searchresults
+                    await driver.sleep(1000);
+                    await driver.wait(until.elementLocated(By.css('#search')), 10000);
+                    await driver.findElement(By.id('search')).sendKeys('running shorts', Key.RETURN);
 
-                 // add compare
-                 await driver.wait(findElement(By.css('.action.tocompare'[0])), 10000);
-                 await driver.findElement(By.css('action.to.compare'[0])).click();
+                    // Select second product and add to "compare"
+                    await driver.wait(until.elementLocated(By.css('a[href$="/artemis-running-short.html"]')), 10000);
+                    await driver.findElement(By.css('a[href$="/artemis-running-short.html"]')).click();
+                    await driver.sleep(1000);
+                    await driver.wait(until.elementLocated(By.css('.action.tocompare')), 10000);
+                    await driver.findElement(By.css('.action.tocompare')).click();
 
-                 /*await driver.wait(findElement(By.css('.action.to.compare'[0])), 10000);
-                 await driver.findElement(By.css('.action.to.compare'[0])).click();
+                    // Go to "Compare products"
+                    await driver.sleep(1000);
+                    await driver.wait(until.elementLocated(By.css('.action.compare')), 0000);
+                    await driver.findElement(By.css('.action.compare')).click();
+       
 
-                 await driver.wait(findElement(By.css('a[href$="/artemis-running-short.html"]')), 10000);
-                 await driver.findElement(By.css('a[href$="/artemis-running-short.html')).click();
-
-                 await driver.wait(findElement(By.css('.action.to.compare'[0])), 10000);
-                 await driver.findElement(By.css('.action.to.compare'[0])).click();*/
-
-
-                 // compare
-
-                 //assert
-
-                }finally {
+                }catch(error) {
+                    console.log(error);
+                } finally {
                     //await driver.quit();
-                    }
-            });
+
+                }
+
         });
-    
     });
-        
+});
