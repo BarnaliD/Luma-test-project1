@@ -1,4 +1,5 @@
-// Setup
+// Amber's Test
+
 const { Builder, By, until } = require('selenium-webdriver');
 const should = require('chai').should();
 const assert = require('chai').assert;
@@ -15,13 +16,14 @@ describe('Locate the Eco-Friendly collection on the Luma Dermostore', () => {
             const driver = await new Builder().forBrowser('firefox').build();
             try {
                 await driver.get('https://magento.softwaretestingboard.com');
-                //await driver.wait(until.elementLocated(By.css('.action.more.icon:last-child')), 10000);
-                //await driver.findElement(By.css('.action.more.icon:last-child')).click();
-                //let collectionLinks = await driver.findElement(By.css('.action.more.icon'));
-                //await collectionLinks[4].click();
+
+                // Go to Eco-Friendly Collection
+                await driver.wait(until.elementLocated(By.css('.home-eco')), 10000);
                 await driver.findElement(By.css('.home-eco')).click();
 
                 await driver.sleep(3000);
+
+                // Confirm that link routes to the Eco-Friendly Collection
 
                 let expectedURL = 'https://magento.softwaretestingboard.com/collections/eco-friendly.html'
 
