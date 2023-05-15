@@ -9,7 +9,7 @@ const assert = require('chai').assert;
     I can stay dry and move with ease/comfort.
 */
 
-describe.only('Locate the Eco-Friendly collection on the Luma Dermostore', () => {
+describe('Locate the Eco-Friendly collection on the Luma Dermostore', () => {
     context('I click on the link that will take me to the collection', async () => {
         it('I should be able to view the entire Eco-Friendly collection', async () => {
             const driver = await new Builder().forBrowser('firefox').build();
