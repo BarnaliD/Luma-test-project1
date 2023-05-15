@@ -1,4 +1,5 @@
-// Setup
+// Amber's Test
+
 const { Builder, By, until } = require('selenium-webdriver');
 const should = require('chai').should();
 const assert = require('chai').assert;
