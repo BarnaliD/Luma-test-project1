@@ -13,7 +13,7 @@ let pass = process.env.PASS;
     list to reference later or share with others.
 */
 
-describe.only("Add an item to the wish list", () => {
+describe("Add an item to the wish list", () => {
   context("Log into the Luma Demostore to add items to wish list", () => {
     it("I should be able to view item on my wish list ", async () => {
       const driver = await new Builder().forBrowser("firefox").build();
@@ -40,26 +40,26 @@ describe.only("Add an item to the wish list", () => {
         await driver.findElement(By.css(".action.more.button")).click();
 
         // Select an item to add to wish list
-        await driver.wait(
-          elementLocated(By.css('a[href$="/nora-practice-tank.html"]')), 10000);
+        await driver.wait(until
+          .elementLocated(By.css('a[href$="/nora-practice-tank.html"]')), 10000);
         await driver
           .findElement(By.css('a[href$="/nora-practice-tank.html"]')).click();
 
         // Select size 
-        await driver.wait(
-          elementLocated(By.css("#option-label-size-143-item-166")), 10000);
+        await driver.wait(until
+          .elementLocated(By.css("#option-label-size-143-item-166")), 10000);
         await driver
           .findElement(By.css("#option-label-size-143-item-166"))
           .click();
 
         // Select color
-        await driver.wait(
-          elementLocated(By.css("#option-label-color-93-item-57")), 10000);
+        await driver.wait(until
+          .elementLocated(By.css("#option-label-color-93-item-57")), 10000);
         await driver
           .findElement(By.css("#option-label-color-93-item-57")).click();
 
         // Add item to wish list
-        await driver.wait(elementLocated(By.css('a[href$="#"]')), 10000);
+        await driver.wait(until.elementLocated(By.css('a[href$="#"]')), 10000);
         await driver.findElement(By.css('a[href="#"]')).click();
 
         await driver.sleep(3000);

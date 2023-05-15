@@ -33,7 +33,7 @@ describe('Go to womens t-shirts and find the ones Erin recomends', () => {
                  console.log('wrks3');
 
                  //yes
-                 await
+                 //await
 
                  //assert
 
