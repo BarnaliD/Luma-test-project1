@@ -39,7 +39,7 @@ describe('Compare two different running shorts to eachother', () => {
                     await driver.findElement(By.css('.action.tocompare')).click();
 
                     // Go to "Compare products"
-                    await driver.sleep(1000);
+                    await driver.sleep(3000);
                     await driver.wait(until.elementLocated(By.css('.action.compare')), 10000);
                     await driver.findElement(By.css('.action.compare')).click();
 
