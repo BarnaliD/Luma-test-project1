@@ -12,7 +12,7 @@ let pass = process.env.PASS;
     list to reference later or share with others.
 */
 
-describe.only("Add an item to the wish list", () => {
+describe("Add an item to the wish list", () => {
     context("Log into the Luma Demostore to add items to wish list", async () => {
         it("I should be able to view item on my wish list ", async () => {
             const driver = await new Builder().forBrowser("firefox").build()
