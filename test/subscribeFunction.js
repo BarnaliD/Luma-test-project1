@@ -1,3 +1,5 @@
+/* Swapnal*/
+
 const{ Builder, By, Key, until} = require('selenium-webdriver');
 const should = require('chai').should();
 
@@ -7,9 +9,9 @@ const should = require('chai').should();
     so that I will get informed about offers from the Luma store.
 */
 
-describe('Subscribe for Newsletter', async () => {
+describe('Subscribe for Newsletter', () => {
 
-    context('I subscribe for the newsletter', async () =>{
+    context('I subscribe for the newsletter', () =>{
 
         it('I should be able to see subscrption successfull message', async () => {
             
@@ -48,7 +50,7 @@ describe('Subscribe for Newsletter', async () => {
                  // Extract text
                  let successLebelText = await successLebel.getText();
 
-                 console.log(successLebelText);
+                 //console.log(successLebelText);
 
                  successLebelText.should.equal('Thank you for your subscription.');
 
