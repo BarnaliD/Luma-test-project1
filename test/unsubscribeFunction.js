@@ -15,7 +15,7 @@ let pass = process.env.PASS
     so that I can choose to subscribe or unsubscribe the newsletter facility .
 */
 
-describe.only('Check the newsletter subscription status', () => {
+describe('Check the newsletter subscription status', () => {
 
     context('I check the newsletter subscription status', () => {
 
