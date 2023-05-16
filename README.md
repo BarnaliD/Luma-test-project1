@@ -1,7 +1,14 @@
 # Luma-test-project1
 **Testing Luma using selenium-webdriver**
 
-# User Stories
+## Testers:
+**Nicholas**
+**Amber**
+**Malin**
+**Swapnal**
+**Barnali**
+
+### User Stories
  1. As a customer, I would like to add items to the cart, so I can see the total price before checking out.
  2. As a customer I would like to bookmark/save favourite items in a wish list to reference later or share with others.
  3. As a customer I want to find a a product that Erin recommends
