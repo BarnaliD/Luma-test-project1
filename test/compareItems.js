@@ -48,12 +48,8 @@ describe('Compare two different running shorts to eachother', () => {
                     const comparePage = await driver.findElement(By.css('.base')).getText();
                     comparePage.should.contain('Compare Products');
        
-
-                }catch(error) {
-                    console.log(error);
                 } finally {
-                    //await driver.quit();
-
+                  await driver.quit();
                 }
 
         });
