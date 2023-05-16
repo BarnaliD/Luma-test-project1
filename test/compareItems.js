@@ -4,7 +4,7 @@ const should = require('chai').should();
     /*
    As a customer I want to compare two items to eachother
    */
-describe.only('Compare two different running shorts to eachother', () => {
+describe('Compare two different running shorts to eachother', () => {
     context('Search for shorts, filter on runners and add two styles to compare', () => {
         it('I should get a camparison of the two styles of shorts', async () => {
                 
@@ -24,6 +24,7 @@ describe.only('Compare two different running shorts to eachother', () => {
                     await driver.sleep(1000);
                     await driver.wait(until.elementLocated(By.css('.action.tocompare')), 10000);
                     await driver.findElement(By.css('.action.tocompare')).click();
+                    await driver.sleep(1000);
                     
                     // Return to searchresults
                     await driver.sleep(1000);
@@ -39,7 +40,7 @@ describe.only('Compare two different running shorts to eachother', () => {
 
                     // Go to "Compare products"
                     await driver.sleep(1000);
-                    await driver.wait(until.elementLocated(By.css('.action.compare')), 0000);
+                    await driver.wait(until.elementLocated(By.css('.action.compare')), 10000);
                     await driver.findElement(By.css('.action.compare')).click();
        
 
