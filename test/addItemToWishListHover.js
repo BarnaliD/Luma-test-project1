@@ -2,6 +2,7 @@
 
 const { Builder, By, until, Key } = require("selenium-webdriver");
 const should = require("chai").should();
+require("dotenv").config();
 
 // Login data
 let user = process.env.TESTUSER;
