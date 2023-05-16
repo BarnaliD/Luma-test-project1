@@ -11,7 +11,7 @@ const assert = require('chai').assert;
 */
 
 describe('Locate the Eco-Friendly collection on the Luma Dermostore', () => {
-    context('I click on the link that will take me to the collection', async () => {
+    context('I click on the link that will take me to the collection', () => {
         it('I should be able to view the entire Eco-Friendly collection', async () => {
             const driver = await new Builder().forBrowser('firefox').build();
             try {
