@@ -12,7 +12,7 @@ let email = process.env.TESTUSER;
     and my thoughts through a web contact form.
 */
 
-describe.only('Contact the company using the contact form', () => {
+describe('Contact the company using the contact form', () => {
     context('I complete and submit the contact form', () => {
         it('I should receive a confirmation that my message was submitted', async () => {
             const driver = new Builder().forBrowser('firefox').build();

@@ -8,7 +8,7 @@ const should = require('chai').should();
     I would like to sort the item I chose by price, 
     so that I can see all the items in ascending order of their price.
 */
-describe.only('Go to sale and select shop women sales',() => {
+describe('Go to sale and select shop women sales',() => {
     context('I choose my size and then sort products by price ',() => {
         it('I can see products in required size and ascending order of prices on product page', async () => {
             const driver = await new Builder().forBrowser('firefox').build();
