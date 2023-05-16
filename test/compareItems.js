@@ -42,6 +42,11 @@ describe('Compare two different running shorts to eachother', () => {
                     await driver.sleep(1000);
                     await driver.wait(until.elementLocated(By.css('.action.compare')), 10000);
                     await driver.findElement(By.css('.action.compare')).click();
+
+                    // Assert
+                    await driver.wait(until.elementLocated(By.css('.base')), 10000);
+                    const comparePage = await driver.findElement(By.css('.base')).getText();
+                    comparePage.should.contain('Compare Products');
        
 
                 }catch(error) {
