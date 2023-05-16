@@ -7,7 +7,7 @@ const should = require('chai').should();
     so that I will get informed about offers from the Luma store.
 */
 
-describe('Subscribe for Newsletter', async () => {
+describe.only('Subscribe for Newsletter', async () => {
 
     context('I subscribe for the newsletter', async () =>{
 
