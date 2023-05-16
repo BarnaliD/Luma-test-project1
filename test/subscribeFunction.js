@@ -53,10 +53,8 @@ describe.only('Subscribe for Newsletter', async () => {
                  successLebelText.should.equal('Thank you for your subscription.');
 
 
-            } catch (error) {
-                console.log(error);
-            } finally{
-                // await driver.quit();
+            } finally {
+                await driver.quit();
             }
         });
     });

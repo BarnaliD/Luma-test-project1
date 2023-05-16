@@ -11,4 +11,4 @@
  7. As a customer, I would like to sort the item I chose by price, so that I can see all the items in ascending order of their price.
  8. As a customer/potential customer, I would like to contact the company about inquiriesand my thoughts through a web contact form.
  9. As a customer I want to subscribe to the newsletter so that I will get informed about offers from the Luma store.
- 10. 
+ 10. As a customer, I want to be able to able to log in to the webpage and update my contact details
