@@ -4,7 +4,7 @@ const should = require('chai').should();
     /*
    As a customer I want to compare two items to eachother
    */
-describe.only('Compare two different running shorts to eachother', () => {
+describe('Compare two different running shorts to eachother', () => {
     context('Search for shorts, filter on runners and add two styles to compare', () => {
         it('I should get a camparison of the two styles of shorts', async () => {
                 
