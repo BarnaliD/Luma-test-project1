@@ -2,11 +2,7 @@
 **Testing Luma using selenium-webdriver**
 
 ## Testers:
-**Nicholas**
-**Amber**
-**Malin**
-**Swapnal**
-**Barnali**
+**Nicholas**, **Amber**, **Malin**, **Swapnal**, **Barnali**
 
 ### User Stories
  1. As a customer, I would like to add items to the cart, so I can see the total price before checking out.
