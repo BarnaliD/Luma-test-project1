@@ -15,3 +15,5 @@
  8. As a customer/potential customer, I would like to contact the company about inquiriesand my thoughts through a web contact form.
  9. As a customer I want to subscribe to the newsletter so that I will get informed about offers from the Luma store.
  10. As a customer I want to check the status of my newsletter subscription so that I can choose to subscribe or unsubscribe the newsletter facility.
+
+All tests pass when running 'npm run report' and some fail when running 'npm run parareport' 
