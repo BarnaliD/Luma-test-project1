@@ -10,7 +10,7 @@ const should = require('chai').should();
     so I can see the total price before checking out.
 */
 
-describe('Add an item to the cart', () => {
+describe.only('Add an item to the cart', () => {
     context('I press add to cart', () => {
         it('I can see the total price of all items added to the cart', async () =>{
             const driver = await new Builder().forBrowser('firefox').build();
@@ -25,8 +25,8 @@ describe('Add an item to the cart', () => {
                 await driver.findElement(By.id('option-label-color-93-item-49')).click();
                 await driver.wait(until.elementLocated(By.id('product-addtocart-button')), 10000);
                 await driver.findElement(By.id('product-addtocart-button')).click();
-                //await driver.elementLocated(until.elementLocated(By.css('.action.showcart')), 10000);
                 await driver.sleep(3000);
+                await driver.wait(until.elementLocated(By.css('.action.showcart')), 10000);
                 await driver.findElement(By.css('.action.showcart')).click();
                 await driver.wait(until.elementLocated(By.css('.price:first-child')), 10000);
                 const price = await driver.findElement(By.css('.price:first-child')).getText();
