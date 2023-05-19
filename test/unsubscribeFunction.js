@@ -64,14 +64,14 @@ describe('Check the newsletter subscription status', () => {
                     if (isSelected) {
                         //Checkbox is checked.
                         checkbox.click();
-                        //I clicked and unchecked
+                        //Checkbox unchecked
                         performSave();
                         unsubscribed();
 
                     } else {
                         //Checkbox is not checked.
                         checkbox.click();
-                        //I clicked and checked
+                        //Checkbox checked
                         performSave();
                         subscribed();
                     }
