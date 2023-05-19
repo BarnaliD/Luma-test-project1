@@ -48,11 +48,10 @@ describe('Subscribe for Newsletter', () => {
                  // Find success message
                 let successLebel = await driver.findElement(By.css('.message-success.success.message'));
                  // Extract text
-                 let successLebelText = await successLebel.getText();
+                let successLebelText = await successLebel.getText();
 
-                 //console.log(successLebelText);
-
-                 successLebelText.should.equal('Thank you for your subscription.');
+                //Check subscribed success message
+                successLebelText.should.equal('Thank you for your subscription.');
 
 
             } finally {

@@ -62,16 +62,16 @@ describe('Check the newsletter subscription status', () => {
                 // check status of checkbox
                 checkbox.isSelected().then(isSelected => {
                     if (isSelected) {
-                        //console.log('Checkbox is checked.');
+                        //Checkbox is checked.
                         checkbox.click();
-                        //console.log('I clicked and unchecked');
+                        //I clicked and unchecked
                         performSave();
                         unsubscribed();
 
                     } else {
-                        //console.log('Checkbox is not checked.');
+                        //Checkbox is not checked.
                         checkbox.click();
-                        //console.log('I clicked and checked');
+                        //I clicked and checked
                         performSave();
                         subscribed();
                     }
@@ -83,6 +83,7 @@ describe('Check the newsletter subscription status', () => {
                     }
 
                     async function subscribed(){
+                        //Check Subscribed success message
                         await driver.wait(until.elementLocated(By.css('.message-success.success.message')),10000);
                         // Find message
                         let successLebel = await driver.findElement(By.css('.message-success.success.message'));
@@ -93,6 +94,7 @@ describe('Check the newsletter subscription status', () => {
                     }
 
                     async function unsubscribed(){
+                        //Check Unsubscribed success message
                         await driver.wait(until.elementLocated(By.css('.message-success.success.message')),10000);
                         // Find message
                         let successLebel = await driver.findElement(By.css('.message-success.success.message'));
