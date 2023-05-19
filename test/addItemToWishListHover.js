@@ -67,7 +67,6 @@ describe("Add an item to the wish list", () => {
 
               // View wish list and confirm that item has been added
               let addedItem = await driver.findElement(By.css('.product-item-name > a[title="Echo Fit Compression Short"]')).getText();
-              console.log(addedItem);
               addedItem.should.contain('Echo Fit Compression Short'); 
             } finally {
               await driver.quit();
