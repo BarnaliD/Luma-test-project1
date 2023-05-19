@@ -2,10 +2,10 @@
 const {Builder, By, Key, until} = require('selenium-webdriver');
 const should = require('chai').should();
     /*
-   As a customer I want to compare two items to eachother
+   As a customer I want to compare two items to each other
    */
-describe('Compare two different running shorts to eachother', () => {
-    context('Search for shorts, filter on runners and add two styles to compare', () => {
+describe('Compare two different running shorts to each other', () => {
+    context('Search for running shorts and add two styles to compare', () => {
         it('I should get a camparison of the two styles of shorts', async () => {
                 
                 const driver = await new Builder().forBrowser('firefox').build();  
@@ -24,10 +24,9 @@ describe('Compare two different running shorts to eachother', () => {
                     await driver.sleep(1000);
                     await driver.wait(until.elementLocated(By.css('.action.tocompare')), 10000);
                     await driver.findElement(By.css('.action.tocompare')).click();
-                    await driver.sleep(1000);
                     
-                    // Return to searchresults
-                    await driver.sleep(1000);
+                    // Return to search results
+                    await driver.sleep(2000);
                     await driver.wait(until.elementLocated(By.css('#search')), 10000);
                     await driver.findElement(By.id('search')).sendKeys('running shorts', Key.RETURN);
 
