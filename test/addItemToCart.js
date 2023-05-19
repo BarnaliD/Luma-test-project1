@@ -10,7 +10,7 @@ const should = require('chai').should();
     so I can see the total price before checking out.
 */
 
-describe.only('Add an item to the cart', () => {
+describe('Add an item to the cart', () => {
     context('I press add to cart', () => {
         it('I can see the total price of all items added to the cart', async () =>{
             const driver = await new Builder().forBrowser('firefox').build();
